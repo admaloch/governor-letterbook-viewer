@@ -6,125 +6,108 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image project</title>
-
-  <!-- jszip  -->
-  <script src="https://cdn.jsdelivr.net/npm/filesaver.js@1.3.4/FileSaver.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.2.2/dist/jszip.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./files/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
-
-
-<div class="container full-container ">
-
-
-
-  <div class="content vh-100  d-flex flex-column justify-content-center align-items-center ">
-
-    <div class="img-header mb-1">
-      <div class="text-center mb-0 mb-md-2">
-        <h1> Territorial and State Governors letterbooks, 1836-1909.</h1>
-        <h3>State Archives of Florida, Series S32 <a
-            href="http://archivescatalog.info.florida.gov/default.asp?IDCFile=/fsa/detailsS.IDC,SPECIFIC=53,DATABASE=SERIES"
-            target="_blank">(Series
-            Description)</a> </h3>
-      </div>
-      <div class="selects mb-2">
-        <div class=" d-flex align-items-center justify-content-center mb-2">
-          <p class="mb-0"><b>Volume:</b> </p>
-
-          <select id="volume-select" class="form-select" aria-label="Default select example">
-
-
-          </select>
-
-          <!-- <button id="download-btn" onclick="downloadZip()"></button> -->
-          <button class="btn btn-outline-secondary ml-3 btn-sm" id="download-btn" onclick="downloadVolumes()">Download
-            Volume <span id="download-volume">1</span>
-          </button>
-
-
-
-        </div> <!--end vol select-->
-        <div class=" d-flex align-items-center justify-content-center mb-2">
-          <p class="mb-0"><b>Page:</b> </p>
-          <select id="page-select" class="form-select" aria-label="Default select example">
-          </select>
-        </div><!--end page select-->
-
-
-      </div>
-    </div>
-
-
-
-
-    <!-- img carousel -->
-    <div class="row d-flex flex-column flex-sm-row justify-content-center align-items-center">
-
-      <div id="vol-info"
-        class="volume-info col-12 col-md-3 text-center d-flex flex-column justify-content-center align-items-center ">
-        <h5 id="vol-title"> Volume 1:</h5>
-        <div id="vol-folders">
-          <p>Call, Richard Keith : April 19, 1836 - October 1, 1836</p>
+<body>
+  <div class="container full-container ">
+    <div class="content vh-100  d-flex flex-column justify-content-center align-items-center ">
+      <!--header content-->
+      <div class="img-header mb-1">
+        <div class="text-center mb-0 mb-md-2">
+          <h1> Territorial and State Governors letterbooks, 1836-1909.</h1>
+          <h3>State Archives of Florida, Series S32 <a
+              href="http://archivescatalog.info.florida.gov/default.asp?IDCFile=/fsa/detailsS.IDC,SPECIFIC=53,DATABASE=SERIES"
+              target="_blank">(Series
+              Description)</a> </h3>
         </div>
-      </div>
+        <div class="selects mb-2">
+          <div class=" d-flex align-items-center justify-content-center mb-2">
+            <p class="mb-0"><b>Volume:</b> </p>
+            <select id="volume-select" class="form-select" aria-label="Default select example">
+            </select>
+            <!-- <button id="download-btn" onclick="downloadZip()"></button> -->
+            <button class="btn btn-outline-secondary ml-3 btn-sm" id="download-btn" onclick="downloadVolumes()">Download
+              Volume <span id="download-volume">1</span>
+            </button>
+          </div> <!--end vol select-->
+          <div class=" d-flex align-items-center justify-content-center mb-2">
+            <p class="mb-0"><b>Page:</b> </p>
+            <select id="page-select" class="form-select" aria-label="Default select example">
+            </select>
+            <p class="mb-0 ml-2">of <span class="volume-length">141</span></p>
+          </div><!--end page select-->
+        </div> <!--end selects container-->
+      </div> <!--end header content-->
 
-      <div class="main-container col-12 col-md-9 d-flex  ">
-        <div class="arrow-links  d-flex justify-content-end align-items-center mr-0 mr-md-2 mr-lg-3">
-          <a id="prev-arrow" class=" arrows d-none" href="#image-carousel" role="button">
-            <div class="d-flex flex-column align-items-center">
-              <span class="d-none d-sm-block">Previous</span>
-              <span class="d-none d-sm-block">Image</span>
-              <i class="fa fa-arrow-left mt-2"></i>
-            </div>
-          </a>
+      <!-- content -->
+      <div class="row d-flex flex-column flex-sm-row justify-content-center align-items-center">
+        <!--volume info -->
+        <div id="vol-info"
+          class="volume-info col-12 col-md-3 text-center d-flex flex-column justify-content-center align-items-center ">
+          <h5 id="vol-title"> Volume 1:</h5>
+          <ul id="vol-list" class="mr-5">
+            <li>Call, Richard Keith : April 19, 1836 - October 1, 1836</li>
+          </ul>
         </div>
-
-        <div class="carousel-container d-flex justify-content-center align-items-center ">
-          <div id="image-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner carousel-image">
-              <div class="carousel-item active">
-                <a id="new-img-link" href="https://www.floridamemory.com/fmp/governor-records/large/s32_v001_001.jpg"
-                  target="_blank">
-                  <img id="new-img-src" class="d-block  img-fluid "
-                    src="https://www.floridamemory.com/fmp/governor-records/large/s32_v001_001.jpg" alt="First slide">
-                </a>
+        <!-- left arrow -->
+        <div class="main-container col-12 col-md-9 d-flex  ">
+          <div class="arrow-links  d-flex justify-content-end align-items-center mr-0 mr-md-2 mr-lg-3">
+            <a id="prev-arrow" class=" arrows d-none" href="#image-carousel" role="button">
+              <div class="d-flex flex-column align-items-center">
+                <span class="d-none d-sm-block">Previous</span>
+                <span class="d-none d-sm-block">Image</span>
+                <i class="fa fa-arrow-left mt-2"></i>
+              </div>
+            </a>
+          </div>
+          <!-- img carousel -->
+          <div class="carousel-container mb-5 d-flex justify-content-center align-items-center ">
+            <div id="image-carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner carousel-image">
+                <div class="carousel-item active">
+                  <a id="new-img-link" href="https://www.floridamemory.com/fmp/governor-records/large/s32_v001_001.jpg"
+                    target="_blank">
+                    <img id="new-img-src" class="d-block  img-fluid "
+                      src="https://www.floridamemory.com/fmp/governor-records/large/s32_v001_001.jpg" alt="First slide">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          <!-- right arrow -->
+          <div class="arrow-links d-none d-flex align-items-center ml-0 ml-md-2 ml-lg-3 mr-0">
+            <a id="next-arrow" class=" arrows " href="#image-carousel" role="button">
+              <div class="d-flex flex-column align-items-center">
+                <span class="d-none d-sm-block">Next</span>
+                <span class="d-none d-sm-block">Image</span>
+                <i class="fa fa-arrow-right mt-2"></i>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="arrow-links d-none d-flex align-items-center ml-0 ml-md-2 ml-lg-3 mr-0">
-          <a id="next-arrow" class=" arrows " href="#image-carousel" role="button">
-            <div class="d-flex flex-column align-items-center">
-              <span class="d-none d-sm-block">Next</span>
-              <span class="d-none d-sm-block">Image</span>
-              <i class="fa fa-arrow-right mt-2"></i>
-            </div>
-          </a>
-        </div>
-      </div>
+      </div> <!--end row for volume/imgs/arrows-->
+    </div> <!--end content container-->
+  </div> <!--end main container-->
 
-    </div>
+  <!-- jquery -->
+  <script src="files/jquery-3.6.3.min.js"></script>
+  <!-- main js files -->
+  <script src="files/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/volume-object.js"></script>
+  <script src="js/seperateVolumes.js"></script>
+  <script src="js/addSelectOptions.js"></script>
+  <script src="js/addVolumeInfo.js"></script>
+  <script src="js/removeLeadingZeros.js"></script>
+  <script src="js/createImgUrl.js"></script>
+  <script src="js/testArrows.js"></script>
+  <script src="js/downloadVolumes.js"></script>
+  <script src="js/script.js"></script>
 
-  </div> <!--end content div-->
-</div>
-
-<!-- jquery -->
-<script src="files/jquery-3.6.3.min.js"></script>
-
-<!-- main js file -->
-<script src="files/bootstrap.bundle.min.js"></script>
-<script src="js/data.js"></script>
-<script src="js/volume-object.js"></script>
-<script src="js/removeLeadingZeros.js"></script>
-<script src="js/seperateVolumes.js"></script>
-<script src="js/testArrows.js"></script>
-<script src="js/script.js"></script>
 </body>
 
 </html>

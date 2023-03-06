@@ -1,7 +1,9 @@
+// remove prev arrow on page 1 and next arrow on final page of volume
 const testArrows = (pageNumValue) => {
-    let lastValue = parseInt($('#page-select option:last-child').val())
-
-    if (pageNumValue == lastValue) {
+    const finalSelectValue = parseInt($('#page-select option:last-child').val())
+    const prevArrow = document.querySelector('#prev-arrow');
+    const nextArrow = document.querySelector('#next-arrow');
+    if (pageNumValue == finalSelectValue) {
         nextArrow.classList.add('d-none')
         prevArrow.classList.remove('d-none')
     } else if (pageSelect.value == '1') {
