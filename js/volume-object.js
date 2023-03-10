@@ -1,4 +1,3 @@
-
 const allVolumes = [
     { "volume_title": "Volume 1:", "folders": ["Call, Richard Keith : April 19, 1836 - October 1, 1836"] },
     { "volume_title": "Volume 2, Parts 1-2:", "folders": ["Reid, Robert Raymond : December 28, 1839 - April 2, 1841", "Call, Richard Keith : March 14, 1842 - August 10, 1844", "Duval, Thomas (Secretary) : August 10, 1844 - September 24, 1844", "Branch, John : June 21, 1844 - May 3, 1845"] },

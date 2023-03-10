@@ -1,8 +1,6 @@
-
-
 // loop to create items in the volume select
-const addVolumeSelectOptions = () => {
-    for (let i = 1; i < 38; i++) {
+ const addVolumeSelectOptions = () => {
+    for (let i = 1; i < numberOfVolumes; i++) {
         const volumeSelectOption = document.createElement('option')
         volumeSelectOption.selectedIndex = i
         volumeSelectOption.innerText = i
@@ -13,10 +11,10 @@ const addVolumeSelectOptions = () => {
 // add items to page select based on current volume value
 const addPageSelectOptions = () => {
     pageSelect.innerText = '';
-    for (let i = 0; i < newArray[volumeNumValue - 1].length; i++) {
+    for (let i = 0; i < newArray[volumeSelect.selectedIndex].length; i++) {
         const pageSelectOption = document.createElement('option')
         pageSelectOption.value = i + 1
-        const optionValueText = newArray[volumeNumValue - 1][i]
+        const optionValueText = newArray[volumeSelect.selectedIndex][i]
         const seperateNum = optionValueText.slice(optionValueText.lastIndexOf('_') + 1)
         const trimmedOptionValue = removeLeadingZeros(seperateNum)
         pageSelectOption.innerText = trimmedOptionValue

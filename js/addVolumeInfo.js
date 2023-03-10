@@ -3,7 +3,7 @@ const addVolumeInfo = () => {
     const volTitle = document.querySelector('#vol-title');
     const volList = document.querySelector('#vol-list');
     volList.innerHTML = null
-    let currVolStr = String(volumeNumValue).padStart(2, '0')
+    let currVolStr = String(volumeSelect.value).padStart(2, '0')
     let currVolIndex = parseInt(currVolStr) - 1
     volTitle.innerText = allVolumes[currVolIndex].volume_title
     for (let i = 0; i < allVolumes[currVolIndex].folders.length; i++) {

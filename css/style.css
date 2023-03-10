@@ -2,6 +2,12 @@
 border: red solid 2px;
 } */
 
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
 html {
     font-size: 1rem;
 }
@@ -9,7 +15,7 @@ html {
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    
+
 }
 
 .full-container {
@@ -32,9 +38,9 @@ body {
 }
 
 
-.arrow-links {
-    height: 675px;
-    width: 100px;
+.main-arrow-links {
+
+    width: 123px;
 }
 
 #vol-title {
@@ -45,14 +51,14 @@ body {
     font-size: 20px;
 }
 
-.arrow-links a {
-    color: black;
+.main-arrow-links a {
+    color: white;
     text-decoration: none;
     opacity: .3;
     transition: opacity .3s ease-in-out;
 }
 
-.arrow-links a:hover {
+.main-arrow-links a:hover {
     opacity: 1;
 }
 
@@ -69,14 +75,13 @@ h3 a:hover {
 }
 
 .carousel-container {
-    width: 425px;
-    height: 700px;
-    max-height: 700px;
+    width: 325px;
+    max-height: 600px;
 }
 
 #new-img-src {
     width: 100%;
-    max-height: 700px;
+    max-height: 600px;
     border: black solid 2px;
 }
 
@@ -98,7 +103,7 @@ h3 a:hover {
         font-size: .8rem;
     }
 
-    .arrow-links {
+    .main-arrow-links {
         height: 600px;
         width: 50px;
     }
@@ -107,7 +112,7 @@ h3 a:hover {
 @media screen and (max-width: 768px) {
     body {
         overflow-y: auto;
-        
+
     }
 }
 
@@ -127,7 +132,7 @@ h3 a:hover {
         border: black solid 2px;
     }
 
-    .arrow-links {
+    .main-arrow-links {
         height: 600px;
         width: 30px;
     }
@@ -149,7 +154,7 @@ h3 a:hover {
         border: black solid 2px;
     }
 
-    .arrow-links {
+    .main-arrow-links {
         height: 450px;
         width: 10px;
     }

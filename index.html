@@ -6,17 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image project</title>
-  <!-- css -->
+  <!-- css links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./files/bootstrap.min.css">
+  <!-- main style sheets-->
+  <link rel="stylesheet" href="./css/thumbnail.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <div class="container full-container ">
-    <div class="content vh-100  d-flex flex-column justify-content-center align-items-center ">
+  <div class="container full-container d-flex justify-content-start">
+    <div class="content vh-100  d-flex flex-column justify-content-center align-items-center mt-2 ">
       <!--header content-->
-      <div class="img-header mb-1">
+      <div class="img-header mb-4">
         <div class="text-center mb-0 mb-md-2">
           <h1> Territorial and State Governors letterbooks, 1836-1909.</h1>
           <h3>State Archives of Florida, Series S32 <a
@@ -42,30 +44,19 @@
           </div><!--end page select-->
         </div> <!--end selects container-->
       </div> <!--end header content-->
-
       <!-- content -->
-      <div class="row d-flex flex-column flex-sm-row justify-content-center align-items-center">
+      <div class="row d-flex flex-column flex-sm-row justify-content-center align-items-center mb-4">
         <!--volume info -->
         <div id="vol-info"
-          class="volume-info col-12 col-md-3 text-center d-flex flex-column justify-content-center align-items-center ">
+          class="volume-info col-12 col-md-2 text-center d-flex flex-column justify-content-center align-items-center ">
           <h5 id="vol-title"> Volume 1:</h5>
-          <ul id="vol-list" class="mr-5">
+          <ul id="vol-list" class="">
             <li>Call, Richard Keith : April 19, 1836 - October 1, 1836</li>
           </ul>
         </div>
-        <!-- left arrow -->
-        <div class="main-container col-12 col-md-9 d-flex  ">
-          <div class="arrow-links  d-flex justify-content-end align-items-center mr-0 mr-md-2 mr-lg-3">
-            <a id="prev-arrow" class=" arrows d-none" href="#image-carousel" role="button">
-              <div class="d-flex flex-column align-items-center">
-                <span class="d-none d-sm-block">Previous</span>
-                <span class="d-none d-sm-block">Image</span>
-                <i class="fa fa-arrow-left mt-2"></i>
-              </div>
-            </a>
-          </div>
+        <div class="main-container col-12 col-md-10 d-flex justify-content-center align-items-center  ">
           <!-- img carousel -->
-          <div class="carousel-container mb-5 d-flex justify-content-center align-items-center ">
+          <div class="carousel-container mb-2 d-flex justify-content-center align-items-center ">
             <div id="image-carousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner carousel-image">
                 <div class="carousel-item active">
@@ -78,25 +69,35 @@
               </div>
             </div>
           </div>
-          <!-- right arrow -->
-          <div class="arrow-links d-none d-flex align-items-center ml-0 ml-md-2 ml-lg-3 mr-0">
-            <a id="next-arrow" class=" arrows " href="#image-carousel" role="button">
-              <div class="d-flex flex-column align-items-center">
-                <span class="d-none d-sm-block">Next</span>
-                <span class="d-none d-sm-block">Image</span>
-                <i class="fa fa-arrow-right mt-2"></i>
-              </div>
-            </a>
-          </div>
         </div>
       </div> <!--end row for volume/imgs/arrows-->
+      <div class="row d-flex justify-content-center align-items-center w-100 ">
+        <div class="col-2 d-none d-sm-block"></div>
+        <div class="col-12 col-md-10">
+          <div class="thumbnail-container d-flex justify-content-around align-items-center">
+            <div class="thumb-content row d-flex flex-row justify-content-center align-items-center">
+              <div id="prev-thumb-arrow" class="thumb-arrows col-1"><i
+                  class="fa fa-arrow-left thumb-icons prev-thumb-icon"></i></div>
+              <div class="thumb-img-container col-10 d-flex justify-content-around align-items-center">
+                <div class="img-thumb-container">
+                  <img src="" alt="" class="" id="">
+                  <div></div>
+                </div>
+              </div>
+              <div id="next-thumb-arrow" class="thumb-arrows col-1"><i
+                  class="fa fa-arrow-right thumb-icons next-thumb-icon"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div> <!--end content container-->
   </div> <!--end main container-->
 
   <!-- jquery -->
   <script src="files/jquery-3.6.3.min.js"></script>
-  <!-- main js files -->
+ <!-- bootstrap -->
   <script src="files/bootstrap.bundle.min.js"></script>
+   <!-- js files -->
   <script src="js/data.js"></script>
   <script src="js/volume-object.js"></script>
   <script src="js/seperateVolumes.js"></script>
@@ -105,9 +106,9 @@
   <script src="js/removeLeadingZeros.js"></script>
   <script src="js/createImgUrl.js"></script>
   <script src="js/testArrows.js"></script>
-  <script src="js/downloadVolumes.js"></script>
-  <script src="js/script.js"></script>
-
+  <script src="js/img-thumbnail.js"></script>
+  <!-- main js file -->
+  <script src="script.js"></script>
 </body>
 
 </html>
