@@ -18,9 +18,13 @@ body {
 
 }
 
+
 .full-container {
+    
+    margin-top: 5em ;
+    margin-bottom: 5em ;
     width: 100%;
-    height: 100vh;
+    
 }
 
 .content {

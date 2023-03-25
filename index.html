@@ -15,7 +15,8 @@
 </head>
 
 <body>
-  <div class="container full-container d-flex justify-content-start">
+
+  <div class="container full-container d-flex justify-content-center">
     <div class="content vh-100  d-flex flex-column justify-content-center align-items-center mt-2 ">
       <!--header content-->
       <div class="img-header mb-4">
@@ -35,26 +36,30 @@
             <button class="btn btn-outline-secondary ml-3 btn-sm" id="download-btn" onclick="downloadVolumes()">Download
               Volume <span id="download-volume">1</span>
             </button>
-          </div> <!--end vol select-->
+          </div>
+          <!--end vol select-->
           <div class=" d-flex align-items-center justify-content-center mb-2">
             <p class="mb-0"><b>Page:</b> </p>
             <select id="page-select" class="form-select" aria-label="Default select example">
             </select>
             <p class="mb-0 ml-2">of <span class="volume-length">141</span></p>
-          </div><!--end page select-->
-        </div> <!--end selects container-->
-      </div> <!--end header content-->
+          </div>
+          <!--end page select-->
+        </div>
+        <!--end selects container-->
+      </div>
+      <!--end header content-->
       <!-- content -->
       <div class="row d-flex flex-column flex-sm-row justify-content-center align-items-center mb-4">
         <!--volume info -->
         <div id="vol-info"
-          class="volume-info col-12 col-md-2 text-center d-flex flex-column justify-content-center align-items-center ">
+          class="volume-info col-12 col-md-3 text-center d-flex flex-column justify-content-center align-items-center ">
           <h5 id="vol-title"> Volume 1:</h5>
           <ul id="vol-list" class="">
             <li>Call, Richard Keith : April 19, 1836 - October 1, 1836</li>
           </ul>
         </div>
-        <div class="main-container col-12 col-md-10 d-flex justify-content-center align-items-center  ">
+        <div class="main-container col-12 col-md-9 d-flex justify-content-center align-items-center  ">
           <!-- img carousel -->
           <div class="carousel-container mb-2 d-flex justify-content-center align-items-center ">
             <div id="image-carousel" class="carousel slide" data-ride="carousel">
@@ -70,7 +75,8 @@
             </div>
           </div>
         </div>
-      </div> <!--end row for volume/imgs/arrows-->
+      </div>
+      <!--end row for volume/imgs/arrows-->
       <div class="row d-flex justify-content-center align-items-center w-100 ">
         <div class="col-2 d-none d-sm-block"></div>
         <div class="col-12 col-md-10">
@@ -90,14 +96,16 @@
           </div>
         </div>
       </div>
-    </div> <!--end content container-->
-  </div> <!--end main container-->
+    </div>
+    <!--end content container-->
+  </div>
+  <!--end main container-->
 
   <!-- jquery -->
   <script src="files/jquery-3.6.3.min.js"></script>
- <!-- bootstrap -->
+  <!-- bootstrap -->
   <script src="files/bootstrap.bundle.min.js"></script>
-   <!-- js files -->
+  <!-- js files -->
   <script src="js/data.js"></script>
   <script src="js/volume-object.js"></script>
   <script src="js/seperateVolumes.js"></script>
