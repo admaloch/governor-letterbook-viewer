@@ -5,5 +5,7 @@ The archives have scanned of over 30,000 images of Governor Richard K. Call's le
 
 Note -- This application is not part of the Florida Memory website or hosted on the same server. For security reasons, the download feature will only work if the files are present as is the case for the offical version hosted in the State Archives reference area. The full version of this appliction is available to the public.
 
+Note -- This is only hosted locally on desktop computers and is not optimized for smaller screen sizes.
+
 Here is a live link:
 https://admaloch.github.io/governor-letterbook-viewer/
